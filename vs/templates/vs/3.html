@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">3*</h1>
+      <p class="lead text-muted">Wszystkie 3*, całkowita ilość {{ three.count }}</p>
+    </div>
+  </section>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+
+      {% for t in three.all|dictsort:'color' %}
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{ t.image.url }}">
+          <div class="card-body">
+            <p class="card-text">{{ t.name }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Pierwsza szkoła 20 lvl</h1>
+      <p class="lead text-muted">Ten dział może niektórych szczególnie zainteresować. <br>
+        Jest tutaj cała moja historia treningów na 20lvl. <br>
+        Będę na bieżąco nadal aktualizował a co za tym idze z czasem statystyki będą sie zbliżać do prawidłowych.
+      </p>
+      <p class="lead text-muted">ogólna ilość z dwóch szkół: {{ cz }} sztuk</p>
+      <p class="lead text-muted">ogólna ilość z pierwszego obozu: {{ c1.count }}</p>
+      <p class="lead text-muted">3*: {{ three }} sztuk (suma {{ threeSum }})</p>
+      <p class="lead text-muted">4*: {{ four }} sztuk (suma {{ fourSum }})</p>
+      <p class="lead text-muted">5*: {{ five }} sztuk (suma {{ fiveSum }})</p>
+      <p class="lead text-muted">Statystyki z obu szkół łacznie:</p>
+      <p class="lead text-muted">3*: {{ threeStat }}%, 4*: {{ fourStat }}%, 5*: {{ fiveStat }}%, </p>
+
+    </div>
+  </section>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+
+      {% for c in c1.all|dictsort:'date' %}
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{ c.image.url }}">
+          <div class="card-body">
+            <p class="card-text">{{ c.name }}</p>
+            <p class="card-text">{{ c.date }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+{% endblock %}

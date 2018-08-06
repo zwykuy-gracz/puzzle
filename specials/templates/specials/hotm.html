@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">HoTM</h1>
+      <p class="lead text-muted">Z tego wynika, że gra ma na chwilę obecną {{ hotm.count }} miesięcy</p>
+    </div>
+  </section>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+
+      {% for h in hotm.all|dictsortreversed:'date' %}
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{ h.image.url }}">
+          <div class="card-body">
+            <p class="card-text">{{ h.name }}</p>
+            <p class="card-text">{{ h.date }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+{% endblock %}

@@ -69,32 +69,32 @@
             <div class="dropdown">
               <button class="dropbtn">Bohaterowie</button>
                 <div class="dropdown-content">
-                  <a href="http://127.0.0.1:8000/vs/3/">***</a>
-                  <a href="http://127.0.0.1:8000/vs/4/">****</a>
-                  <a href="http://127.0.0.1:8000/vs/5/">*****</a>
+                  <a href="{% url "3" %}">***</a>
+                  <a href="{% url "4" %}">****</a>
+                  <a href="{% url "5" %}">*****</a>
                 </div>
             </div>
             <!-- <a class="nav-item nav-link active" href="#">VS</a> -->
-            <a class="nav-item nav-link dropbtn" href="http://127.0.0.1:8000/specials/hotm/">HOTM</a>
+            <a class="nav-item nav-link dropbtn" href="{% url "hotm" %}">HOTM</a>
             <div class="dropdown">
               <button class="dropbtn">Wydarzenia</button>
                 <div class="dropdown-content">
-                  <a href="http://127.0.0.1:8000/specials/fables-of-grimforest/">Fables of grimforest</a>
-                  <a href="http://127.0.0.1:8000/specials/guardians-of-teltoc/">Guardians of teltoc</a>
-                  <a href="http://127.0.0.1:8000/specials/knights-of-avalon/">Knights of avalon</a>
-                  <a href="http://127.0.0.1:8000/specials/pirates-of-corellia/">Pirates of corellia</a>
-                  <a href="http://127.0.0.1:8000/specials/easter-event/">Easter event</a>
-                  <a href="http://127.0.0.1:8000/specials/the-sand-empire/">The sand empire</a>
+                  <a href="{% url "fables-of-grimforest" }">Fables of grimforest</a>
+                  <a href="{% url "guardians-of-teltoc" %}">Guardians of teltoc</a>
+                  <a href="{% url "knights-of-avalon" %}">Knights of avalon</a>
+                  <a href="{% url "pirates-of-corellia" %}">Pirates of corellia</a>
+                  <a href="{% url "easter-event" %}">Easter event</a>
+                  <a href="{% url "the-sand-empire" %}">The sand empire</a>
                 </div>
             </div>
             <div class="dropdown">
               <button class="dropbtn">20 lvl</button>
                 <div class="dropdown-content">
-                  <a href="http://127.0.0.1:8000/camps/1/">pierwsza</a>
-                  <a href="http://127.0.0.1:8000/camps/2/">druga</a>
+                  <a href="{% url "1" %}">pierwsza</a>
+                  <a href="{% url "2" %}">druga</a>
                 </div>
             </div>
-            <a class="nav-item nav-link" href="http://127.0.0.1:8000/kontakt/">Kontakt</a>
+            <a class="nav-item nav-link" href="{% url "kontakt" %}">Kontakt</a>
           </div>
         </div>
       </nav>
